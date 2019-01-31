@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <GVL Name="GVL_ILK" Id="{71142060-83c7-40ff-a8c7-88a94b51c650}">
+    <Declaration><![CDATA[VAR_GLOBAL
+	US_Turbo_Valves_Closed:  BOOL;
+	US_Turbo_Valves_Open:  BOOL;
+	DS_Turbo_Valves_Closed: BOOL;
+	DS_Turbo_Valves_Open:  BOOL;
+	US_Turbo_Running:  BOOL;
+	DS_Turbo_Running:  BOOL;
+	TwinscrewPumps_Valves_Closed: BOOL;
+	US_TwinscrewPumps_Valves_Open : BOOL;
+	DS_TwinscrewPumps_Valves_Open : BOOL;
+	US_Aperture_Closed: BOOL;
+	DS_Aperture_Closed: BOOL;
+	
+	xUSAperturesOpnOK : BOOL;
+	xDSAperturesOpnOK : BOOL;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

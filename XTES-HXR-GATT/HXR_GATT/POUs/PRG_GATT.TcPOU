@@ -17,7 +17,7 @@ GMP_311();
 
 (*Valves*)
 (*Gas Cell vent valve*)
-VVRC_311 (i_xExtILK_OK:= VGC_391.iq_stValve.i_xClsLS AND DSV_VGC.i_xClsLS AND US_Turbo_Valves_Closed AND DS_Turbo_Valves_Closed AND TwinscrewPumps_Valves_Closed);
+VVRC_311 (i_xExtILK_OK:= VGC_391.iq_stValve.i_xClsLS AND DSV_VGC.VGC.i_xClsLS AND US_Turbo_Valves_Closed AND DS_Turbo_Valves_Closed AND TwinscrewPumps_Valves_Closed);
 
 (* N2 Cutt off valve*)
 VVC_311(i_xExtILK_OK := US_Aperture_Closed AND US_Turbo_Valves_Open AND US_Turbo_Running AND DS_Aperture_Closed AND DS_Turbo_Valves_Open AND US_Turbo_Running AND US_TwinscrewPumps_Valves_Open AND DS_TwinscrewPumps_Valves_Open);
@@ -29,19 +29,7 @@ VCN_311(i_xExtIlkOK:= TRUE,i_ReqPos:= VCN_Req_Pos);
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GATT">
-      <LineId Id="5" Count="1" />
-      <LineId Id="11" Count="1" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="13" Count="0" />
-      <LineId Id="24" Count="0" />
-      <LineId Id="23" Count="0" />
-      <LineId Id="25" Count="1" />
-      <LineId Id="29" Count="0" />
-      <LineId Id="50" Count="0" />
-      <LineId Id="30" Count="0" />
-      <LineId Id="51" Count="0" />
-      <LineId Id="27" Count="0" />
-      <LineId Id="7" Count="0" />
+      <LineId Id="59" Count="15" />
       <LineId Id="28" Count="0" />
     </LineIds>
   </POU>

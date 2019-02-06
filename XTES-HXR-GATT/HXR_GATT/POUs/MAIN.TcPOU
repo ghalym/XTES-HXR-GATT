@@ -7,25 +7,11 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[
-(*Evaluate Global Interlokcs*)
 
-TwinscrewPumps_Valves_Closed := VRC_261.q_stValve.i_xClsLS AND  VRC_262.q_stValve.i_xClsLS AND VRC_341.q_stValve.i_xClsLS AND VRC_342.q_stValve.i_xClsLS;
-US_Turbo_Valves_Closed := VRC_209.iq_stValve.i_xClsLS AND  VRC_221.iq_stValve.i_xClsLS AND VRC_231.iq_stValve.i_xClsLS AND VRC_251.iq_stValve.i_xClsLS;
-DS_Turbo_Valves_Closed := VRC_351.iq_stValve.i_xClsLS AND  VRC_371.iq_stValve.i_xClsLS AND VRC_381.iq_stValve.i_xClsLS AND VRC_391.iq_stValve.i_xClsLS;
-US_TwinscrewPumps_Valves_Open := (VRC_261.q_stValve.i_xOpnLS AND PFM_261.q_stPump.i_xIsRun) OR   (VRC_262.q_stValve.i_xOpnLS AND PFM_262.q_stPump.i_xIsRun);
-DS_TwinscrewPumps_Valves_Open := (VRC_341.q_stValve.i_xOpnLS AND PFM_341.q_stPump.i_xIsRun) OR   (VRC_342.q_stValve.i_xOpnLS AND PFM_342.q_stPump.i_xIsRun);
-US_Turbo_Valves_Open := VRC_209.iq_stValve.i_xOpnLS AND  VRC_221.iq_stValve.i_xOpnLS AND VRC_231.iq_stValve.i_xOpnLS AND VRC_251.iq_stValve.i_xOpnLS;
-DS_Turbo_Valves_Open := VRC_351.iq_stValve.i_xOpnLS AND  VRC_371.iq_stValve.i_xOpnLS AND VRC_381.iq_stValve.i_xOpnLS AND VRC_391.iq_stValve.i_xOpnLS;
-US_Aperture_Closed := VGC_201.iq_stValve.i_xClsLS AND VGC_211.iq_stValve.i_xClsLS AND VGC_221.iq_stValve.i_xClsLS AND VGC_231.iq_stValve.i_xClsLS AND VGC_241.iq_stValve.i_xClsLS AND VGC_251.iq_stValve.i_xClsLS AND VGC_261.iq_stValve.i_xClsLS ;
-DS_Aperture_Closed := VGC_311.iq_stValve.i_xClsLS AND VGC_341.iq_stValve.i_xClsLS AND VGC_351.iq_stValve.i_xClsLS AND VGC_361.iq_stValve.i_xClsLS AND VGC_371.iq_stValve.i_xClsLS AND VGC_381.iq_stValve.i_xClsLS; ;
-US_Turbo_Running := (PTM_209.iq_stPtm.eState = pumpRUNNING) AND (PTM_221.iq_stPtm.eState = pumpRUNNING) AND (PTM_231.iq_stPtm.eState = pumpRUNNING) AND (PTM_251.iq_stPtm.eState = pumpRUNNING);
-DS_Turbo_Running := (PTM_351.iq_stPtm.eState = pumpRUNNING) AND (PTM_371.iq_stPtm.eState = pumpRUNNING) AND (PTM_381.iq_stPtm.eState = pumpRUNNING) AND (PTM_391.iq_stPtm.eState = pumpRUNNING);
-
-xUSAperturesOpnOK := NOT VVC_241.iq_stValve.q_xOPN_DO AND NOT VVC_311.iq_stValve.q_xOPN_DO; 
-xDSAperturesOpnOK := NOT VVC_361.iq_stValve.q_xOPN_DO AND NOT VVC_311.iq_stValve.q_xOPN_DO; 
 
 
 (* Call all Programs*)
+PRG_ILK();
 PRG_DIFF_PUMP();
 PRG_ROOTS();
 PRG_GATT();
@@ -33,16 +19,8 @@ PRG_GEM();
 ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="12" Count="1" />
-      <LineId Id="15" Count="11" />
-      <LineId Id="31" Count="0" />
-      <LineId Id="14" Count="0" />
-      <LineId Id="6" Count="1" />
-      <LineId Id="33" Count="0" />
-      <LineId Id="8" Count="0" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="30" Count="0" />
-      <LineId Id="27" Count="2" />
+      <LineId Id="37" Count="9" />
+      <LineId Id="29" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

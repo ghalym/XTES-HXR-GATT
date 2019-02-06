@@ -2,6 +2,13 @@
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
   <GVL Name="GVL_ILK" Id="{71142060-83c7-40ff-a8c7-88a94b51c650}">
     <Declaration><![CDATA[VAR_GLOBAL
+	
+
+	{attribute 'pytmc' := 'pv: AT1L0:GAS:VAC:OVRDON'}
+	xSystemOverrideMode	:	BOOL; (* Global system override for the GATT*)
+
+
+(* Interlock related bits, local to the PLC*)
 	US_Turbo_Valves_Closed:  BOOL;
 	US_Turbo_Valves_Open:  BOOL;
 	DS_Turbo_Valves_Closed: BOOL;
@@ -16,6 +23,8 @@
 	
 	xUSAperturesOpnOK : BOOL;
 	xDSAperturesOpnOK : BOOL;
+	
+	
 
 END_VAR]]></Declaration>
   </GVL>

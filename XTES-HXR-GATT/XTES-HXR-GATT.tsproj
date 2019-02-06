@@ -30,7 +30,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{21F421D2-5845-456D-B373-D57E6AAB3E9D}" Name="HXR_GATT" PrjFilePath="HXR_GATT\HXR_GATT.plcproj" TmcFilePath="HXR_GATT\HXR_GATT.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="HXR_GATT\HXR_GATT.tmc">
 					<Name>HXR_GATT Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -48,6 +48,44 @@
 								<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
 							</Comment>
 							<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.USG_GCC.i_rPRESS</Name>
+							<Comment>
+								<![CDATA[This is the human-readable pressure]]>
+							</Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.USG_GCC.i_xAT_VAC</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.USG_GCC.i_xPRESS_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.DSG_GCC.i_rPRESS</Name>
+							<Comment>
+								<![CDATA[This is the human-readable pressure]]>
+							</Comment>
+							<Type>REAL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.DSG_GCC.i_xAT_VAC</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.DSG_GCC.i_xPRESS_OK</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.DSV_VGC.i_xOpnLS</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.DSV_VGC.i_xClsLS</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_209.i_iPRESS_R</Name>
@@ -1017,56 +1055,56 @@
 						<Var>
 							<Name>GVL_Devices.GCC_209.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_221.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_231.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_251.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_351.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_371.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_381.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GCC_391.q_xHV_DIS</Name>
 							<Comment>
-								<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EL2624) ^Output]]>
+								<![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]>
 							</Comment>
 							<Type>BOOL</Type>
 						</Var>
@@ -1219,7 +1257,8 @@
 						<Var>
 							<Name>GVL_Devices.VCN_311.q_iRawPosition</Name>
 							<Comment>
-								<![CDATA[IO]]>
+								<![CDATA[ 
+IO]]>
 							</Comment>
 							<Type>INT</Type>
 						</Var>

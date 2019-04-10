@@ -12,78 +12,81 @@
 	
 	
 	(*Gauges*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:209 '}
-	GCC_209 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:209 '}
-	GPI_209 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:221 '}
-	GCC_221 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:221 '}
-	GPI_221 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:231 '}
-	GCC_231 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:231 '}
-	GPI_231 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:251 '}
-	GCC_251 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:251 '}
-	GPI_251 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:222 '}
-	GPI_222 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:232 '}
-	GPI_232 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:261 '}
-	GPI_261 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:252 '}
-	GPI_252 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:262 '}
-	GPI_262 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:263 '}
-	GPI_263 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:311 '}
-	GPI_311 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:341 '}
-	GPI_341 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:342 '}
-	GPI_342 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:343 '}
-	GPI_343 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:351 '}
-	GCC_351 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:351 '}
-	GPI_351 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:352 '}
-	GPI_352 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:371 '}
-	GCC_371 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:371 '}
-	GPI_371 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:372 '}
-	GPI_372 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:381 '}
-	GCC_381 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:381 '}
-	GPI_381 : FB_MKS317;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:382 '}
-	GPI_382 : FB_MKS275;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GCC:391 '}
-	GCC_391 : FB_MKS422;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:391 '}
-	GPI_391 : FB_MKS317;
+	(*EM1L0*)
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCC:10 '}
+	GEM1_GCC_10 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:10 '}
+	GEM1_GPI_10 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCC:20 '}
+	GEM1_GCC_20 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:20 '}
+	GEM1_GPI_20 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCC:30 '}
+	GEM1_GCC_30 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:30 '}
+	GEM1_GPI_30 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCC:50 '}
+	GEM1_GCC_50 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:50 '}
+	GEM1_GPI_50 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:11 '}
+	GEM1_GPI_11 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:31 '}
+	GEM1_GPI_31 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:51 '}
+	GEM1_GPI_51 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:60 '}
+	GEM1_GPI_60 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:61 '}
+	GEM1_GPI_61 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GPI:71 '}
+	GEM1_GPI_71 : FB_MKS275;
+	(*AT1L0*)
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:GPI:10 '}
+	GATT_GPI_10 : FB_MKS317;
+	(*EM2L0*)
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:10 '}
+	GEM2_GPI_10 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:11 '}
+	GEM2_GPI_11 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:21 '}
+	GEM2_GPI_21 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCC:30 '}
+	GEM2_GCC_30 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:30 '}
+	GEM2_GPI_30 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:31 '}
+	GEM2_GPI_31 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCC:50 '}
+	GEM2_GCC_50 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:50 '}
+	GEM2_GPI_50 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:51 '}
+	GEM2_GPI_51 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCC:60 '}
+	GEM2_GCC_60 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:60 '}
+	GEM2_GPI_60 : FB_MKS317;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:61 '}
+	GEM2_GPI_61 : FB_MKS275;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCC:70 '}
+	GEM2_GCC_70 : FB_MKS422;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:70 '}
+	GEM2_GPI_70 : FB_MKS317;
 	(* GAS Cell CM*)
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:311 '}
-	GBA_311 : FB_GCM;
+	GATT_GBA_10 : FB_GCM;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:GMP:311 '}
-	GMP_311 : FB_GCM;
+	GATT_GMP_10 : FB_GCM;
 	(*GEM Gauges*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:241 '}
-	GBA_241 : FB_GCM;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:242 '}
-	GBA_242 : FB_GCM;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:361 '}
-	GBA_361 : FB_GCM;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:362 '}
-	GBA_362 : FB_GCM;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GBA:41 '}
+	GEM1_GBA_41 : FB_GCM;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GBA:42 '}
+	GEM1_GBA_42 : FB_GCM;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GBA:41 '}
+	GEM2_GBA_41 : FB_GCM;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GBA:42 '}
+	GEM2_GBA_42 : FB_GCM;
 
 	(*Differential Pumping section*)
 	(*valves*)
@@ -114,22 +117,22 @@
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:VGC:381 '}
 	VGC_381: FB_VRC;
 	(*Turbo isolation valves*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:209 '}
-	VRC_209: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:221 '}
-	VRC_221: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:231 '}
-	VRC_231: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:251 '}
-	VRC_251: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:351 '}
-	VRC_351: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:371 '}
-	VRC_371: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:381 '}
-	VRC_381: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:391 '}
-	VRC_391: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:10 '}
+	GEM1_VRC_10: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:20 '}
+	GEM1_VRC_20: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:30 '}
+	GEM1_VRC_30: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:50 '}
+	GEM1_VRC_50: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:30 '}
+	GEM2_VRC_30: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:50 '}
+	GEM2_VRC_50: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:60 '}
+	GEM2_VRC_60: FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:70 '}
+	GEM2_VRC_70: FB_VRC;
 	(*Kashiyama Valves*)
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:261 '}
 	VRC_261:FB_Kashiyama_VRC;
@@ -167,14 +170,14 @@
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:361 '}
 	VVC_361: FB_VCC;
 	(*Pressure Control Valve*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:241 '}
-	VPC_241 : FB_MKS248;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:242 '}
-	VPC_242 : FB_MKS248;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:361 '}
-	VPC_361 : FB_MKS248;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:362 '}
-	VPC_362 : FB_MKS248;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:VPC:41 '}
+	GEM1_VPC_41 : FB_MKS248;
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:VPC:42 '}
+	GEM1_VPC_42 : FB_MKS248;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:VPC:41 '}
+	GEM2_VPC_41 : FB_MKS248;
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:VPC:42 '}
+	GEM2_VPC_42 : FB_MKS248;
 	
 	
 	
@@ -185,21 +188,21 @@
 	(*Pumps*)
 	(*Turbo*)
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:209 '}
-	PTM_209 : FB_PTM_Agilent;
+	GEM1_PTM_10 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:221 '}
-	PTM_221 : FB_PTM_Agilent;
+	GEM1_PTM_20 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:231 '}
-	PTM_231 : FB_PTM_Agilent;
+	GEM1_PTM_30 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:251 '}
-	PTM_251 : FB_PTM_Agilent;
+	GEM1_PTM_50 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:351 '}
-	PTM_351 : FB_PTM_Agilent;
+	GEM2_PTM_30 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:371 '}
-	PTM_371 : FB_PTM_Agilent;
+	GEM2_PTM_50 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:381 '}
-	PTM_381 : FB_PTM_Agilent;
+	GEM2_PTM_60 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PTM:391 '}
-	PTM_391 : FB_PTM_Agilent;
+	GEM2_PTM_70 : FB_PTM_Agilent;
 	(*Scrool Pumps*)
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PFM:221 '}
 	PFM_221 : FB_ScrollPump;
@@ -222,6 +225,28 @@
 	PFM_341: FB_KashiyamaPump;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:PFM:342 '}
 	PFM_342: FB_KashiyamaPump;
+	
+	
+	(*Pneumatic actuators*)
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:321 '}
+	MPA_321: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:322 '}
+	MPA_322: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:323 '}
+	MPA_323: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:324 '}
+	MPA_324: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:325 '}
+	MPA_325: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:326 '}
+	MPA_326: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:327 '}
+	MPA_327: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:328 '}
+	MPA_328: FB_MPA;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:329 '}
+	MPA_329: FB_MPA;
+	
 	
 END_VAR]]></Declaration>
   </GVL>

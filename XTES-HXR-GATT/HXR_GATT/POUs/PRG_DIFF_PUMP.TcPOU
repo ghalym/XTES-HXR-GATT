@@ -8,29 +8,31 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Gagues*)
+(*EM1L0*)
 DSG_GCC(VG=>); // Downstream Gague from Down Stream PLC System
-GPI_209(PG=>);
-GCC_209(PG:=GPI_209.PG,IG=>);
-GPI_221(PG=>);
-GCC_221(PG:=GPI_221.PG,IG=>);
-GPI_231(PG=>);
-GCC_231(PG:=GPI_231.PG,IG=>);
-GPI_251(PG=>);
-GCC_251(PG:=GPI_251.PG,IG=>);
-GPI_252(PG=>);
-GPI_222(PG=>);
-GPI_232(PG=>);
-GPI_351(PG=>);
-GCC_351(PG:=GPI_351.PG,IG=>);
-GPI_352(PG=>);
-GPI_371(PG=>);
-GCC_371(PG:=GPI_371.PG,IG=>);
-GPI_372(PG=>);
-GPI_381(PG=>);
-GCC_381(PG:=GPI_381.PG,IG=>);
-GPI_382(PG=>);
-GPI_391(PG=>);
-GCC_391(PG:=GPI_391.PG,IG=>);
+GEM1_GPI_10(PG=>);
+GEM1_GCC_10(PG:=GEM1_GPI_10.PG,IG=>);
+GEM1_GPI_20(PG=>);
+GEM1_GCC_20(PG:=GEM1_GPI_20.PG,IG=>);
+GEM1_GPI_30(PG=>);
+GEM1_GCC_30(PG:=GEM1_GPI_30.PG,IG=>);
+GEM1_GPI_50(PG=>);
+GEM1_GCC_50(PG:=GEM1_GPI_50.PG,IG=>);
+GEM1_GPI_11(PG=>);
+GEM1_GPI_31(PG=>);
+GEM1_GPI_51(PG=>);
+(*AT1L0*)
+GEM2_GPI_30(PG=>);
+GEM2_GCC_30(PG:=GEM2_GPI_30.PG,IG=>);
+GEM2_GPI_31(PG=>);
+GEM2_GPI_50(PG=>);
+GEM2_GCC_50(PG:=GEM2_GPI_50.PG,IG=>);
+GEM2_GPI_51(PG=>);
+GEM2_GPI_60(PG=>);
+GEM2_GCC_60(PG:=GEM2_GPI_60.PG,IG=>);
+GEM2_GPI_61(PG=>);
+GEM2_GPI_70(PG=>);
+GEM2_GCC_70(PG:=GEM2_GPI_70.PG,IG=>);
 
 (*VALVES*)
 (*Aperture valve may open when Detector and Attenuator N2 valves are closed. Override provided *)
@@ -50,68 +52,72 @@ VGC_361(i_xExtILK_OK:=xDSAperturesOpnOK,i_xOverrideMode := xSystemOverrideMode);
 VGC_371(i_xExtILK_OK:=xDSAperturesOpnOK,i_xOverrideMode := xSystemOverrideMode);
 VGC_381(i_xExtILK_OK:=xDSAperturesOpnOK,i_xOverrideMode := xSystemOverrideMode);
 (*downstream isolation valve*)
-VGC_391(i_stUSG := GCC_391.IG, i_stDSG:= DSG_GCC.VG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
+VGC_391(i_stUSG := GEM2_GCC_70.IG, i_stDSG:= DSG_GCC.VG,i_xDis_DPIlk := TRUE, i_xEPS_OK := TRUE,
 		i_xPMPS_OK := TRUE, i_xExt_OK := TRUE, i_xOverrideMode := xSystemOverrideMode);
 DSV_VGC(VGC=>);
 
 (*Turbo vent valves NO*)
-VCC_221(i_stPTM :=PTM_221.iq_stPtm); 
-VCC_231(i_stPTM :=PTM_231.iq_stPtm);
-VCC_251(i_stPTM :=PTM_231.iq_stPtm);
-VCC_351(i_stPTM :=PTM_351.iq_stPtm);
-VCC_371(i_stPTM :=PTM_371.iq_stPtm);
-VCC_391(i_stPTM :=PTM_391.iq_stPtm);
+VCC_221(i_stPTM :=GEM1_PTM_20.iq_stPtm); 
+VCC_231(i_stPTM :=GEM1_PTM_30.iq_stPtm);
+VCC_251(i_stPTM :=GEM1_PTM_50.iq_stPtm);
+VCC_351(i_stPTM :=GEM2_PTM_30.iq_stPtm);
+VCC_371(i_stPTM :=GEM2_PTM_50.iq_stPtm);
+VCC_391(i_stPTM :=GEM2_PTM_70.iq_stPtm);
 
 
 (*Turbo Isolation valves*)
- VRC_209(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_209.iq_stPtm,GPI_209.PG));
- VRC_221(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_221.iq_stPtm,GPI_221.PG));
- VRC_231(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_231.iq_stPtm,GPI_231.PG));
- VRC_251(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_251.iq_stPtm,GPI_251.PG));
- VRC_351(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_351.iq_stPtm,GPI_351.PG));
- VRC_371(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_371.iq_stPtm,GPI_371.PG));
- VRC_381(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_381.iq_stPtm,GPI_381.PG));
- VRC_391(i_xExtILK_OK := F_TurboGateValve_ILK(PTM_391.iq_stPtm,GPI_391.PG));
+ GEM1_VRC_10(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_10.iq_stPtm,GEM1_GPI_10.PG));
+ GEM1_VRC_20(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_20.iq_stPtm,GEM1_GPI_20.PG));
+ GEM1_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_30.iq_stPtm,GEM1_GPI_30.PG));
+ GEM1_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM1_PTM_50.iq_stPtm,GEM1_GPI_50.PG));
+ GEM2_VRC_30(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_30.iq_stPtm,GEM2_GPI_30.PG));
+ GEM2_VRC_50(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_50.iq_stPtm,GEM2_GPI_50.PG));
+ GEM2_VRC_60(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_60.iq_stPtm,GEM2_GPI_60.PG));
+ GEM2_VRC_70(i_xExtILK_OK := F_TurboGateValve_ILK(GEM2_PTM_70.iq_stPtm,GEM2_GPI_70.PG));
 
 (*Turbo Pumps*)
-PTM_209.i_xExtILKOk := F_TurboExtILK_NO(PTM_209.iq_stPtm, GPI_222.PG,
-						GPI_209.PG,VCC_221.q_stValve,PFM_221.iq_stPFO);
-PTM_209(i_stGauge:=GPI_222.PG,i_rMaxBackingPressure :=0.01);
-PTM_221.i_xExtILKOk := F_TurboExtILK_NO(PTM_221.iq_stPtm,BackingGauge:= GPI_222.PG,
-						InletGauge:=GPI_221.PG,VCC_221.q_stValve,PFM_221.iq_stPFO);
-PTM_221(i_stGauge:=GPI_222.PG,i_rMaxBackingPressure :=0.01);
-PTM_231(i_xExtILKOK:=F_TurboExtILK_NO(PTM_231.iq_stPtm, GPI_232.PG,
-						GPI_231.PG,VCC_231.q_stValve,PFM_231.iq_stPFO),
-		i_stGauge:=GPI_232.PG,i_rMaxBackingPressure :=0.01);
-PTM_251(i_xExtILKOK:=F_TurboExtILK_NO(PTM_251.iq_stPtm, GPI_252.PG,
-						GPI_251.PG,VCC_251.q_stValve,PFM_251.iq_stPFO),
-		i_stGauge:=GPI_252.PG,i_rMaxBackingPressure :=0.01);
-PTM_351(i_xExtILKOK:=F_TurboExtILK_NO(PTM_351.iq_stPtm, GPI_352.PG,
-						GPI_351.PG,VCC_351.q_stValve,PFM_351.iq_stPFO),
-		i_stGauge:=GPI_252.PG,i_rMaxBackingPressure :=0.01);
-PTM_371(i_xExtILKOK:=F_TurboExtILK_NO(PTM_371.iq_stPtm, GPI_372.PG,
-						GPI_371.PG,VCC_371.q_stValve,PFM_371.iq_stPFO),
-		i_stGauge:=GPI_352.PG,i_rMaxBackingPressure :=0.01);
-PTM_381(i_xExtILKOK:=F_TurboExtILK_NO(PTM_381.iq_stPtm, GPI_382.PG,
-						GPI_381.PG,VCC_391.q_stValve,PFM_381.iq_stPFO),
-		i_stGauge:=GPI_382.PG,i_rMaxBackingPressure :=0.01);
-PTM_391(i_xExtILKOK:=F_TurboExtILK_NO(PTM_391.iq_stPtm, GPI_382.PG,
-						GPI_391.PG,VCC_391.q_stValve,PFM_381.iq_stPFO),
-		i_stGauge:=GPI_382.PG,i_rMaxBackingPressure :=0.01);
+GEM1_PTM_10.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_10.iq_stPtm, GEM1_GPI_11.PG,
+						GEM1_GPI_10.PG,VCC_221.q_stValve,PFM_221.iq_stPFO);
+GEM1_PTM_10(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.01);
+GEM1_PTM_20.i_xExtILKOk := F_TurboExtILK_NO(GEM1_PTM_20.iq_stPtm,BackingGauge:= GEM1_GPI_11.PG,
+						InletGauge:=GEM1_GPI_20.PG,VCC_221.q_stValve,PFM_221.iq_stPFO);
+GEM1_PTM_20(i_stGauge:=GEM1_GPI_11.PG,i_rMaxBackingPressure :=0.01);
+GEM1_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_30.iq_stPtm, GEM1_GPI_31.PG,
+						GEM1_GPI_30.PG,VCC_231.q_stValve,PFM_231.iq_stPFO),
+		i_stGauge:=GEM1_GPI_31.PG,i_rMaxBackingPressure :=0.01);
+GEM1_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM1_PTM_50.iq_stPtm, GEM1_GPI_51.PG,
+						GEM1_GPI_50.PG,VCC_251.q_stValve,PFM_251.iq_stPFO),
+		i_stGauge:=GEM1_GPI_51.PG,i_rMaxBackingPressure :=0.01);
+GEM2_PTM_30(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_30.iq_stPtm, GEM2_GPI_31.PG,
+						GEM2_GPI_30.PG,VCC_351.q_stValve,PFM_351.iq_stPFO),
+		i_stGauge:=GEM2_GPI_31.PG,i_rMaxBackingPressure :=0.01);
+GEM2_PTM_50(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_50.iq_stPtm, GEM2_GPI_51.PG,
+						GEM2_GPI_50.PG,VCC_371.q_stValve,PFM_371.iq_stPFO),
+		i_stGauge:=GEM2_GPI_51.PG,i_rMaxBackingPressure :=0.01);
+GEM2_PTM_60(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_60.iq_stPtm, GEM2_GPI_61.PG,
+						GEM2_GPI_60.PG,VCC_391.q_stValve,PFM_381.iq_stPFO),
+		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.01);
+GEM2_PTM_70(i_xExtILKOK:=F_TurboExtILK_NO(GEM2_PTM_70.iq_stPtm, GEM2_GPI_61.PG,
+						GEM2_GPI_70.PG,VCC_391.q_stValve,PFM_381.iq_stPFO),
+		i_stGauge:=GEM2_GPI_61.PG,i_rMaxBackingPressure :=0.01);
 
 (*Roughing pumps*)
-PFM_221(VentValve:= VCC_221.q_stValve, TurboIsOn:= (PTM_209.iq_stPtm.q_RunDO OR PTM_221.iq_stPtm.q_RunDO));
-PFM_231(VentValve:= VCC_231.q_stValve, TurboIsOn:= PTM_231.iq_stPtm.q_RunDO);
-PFM_251(VentValve:= VCC_251.q_stValve, TurboIsOn:= PTM_251.iq_stPtm.q_RunDO); 
-PFM_351(VentValve:= VCC_351.q_stValve, TurboIsOn:= PTM_351.iq_stPtm.q_RunDO); 
-PFM_371(VentValve:= VCC_371.q_stValve, TurboIsOn:= PTM_371.iq_stPtm.q_RunDO); 
-PFM_381(VentValve:= VCC_391.q_stValve, TurboIsOn:= (PTM_381.iq_stPtm.q_RunDO OR PTM_391.iq_stPtm.q_RunDO)); 
+PFM_221(VentValve:= VCC_221.q_stValve, TurboIsOn:= (GEM1_PTM_10.iq_stPtm.q_RunDO OR GEM1_PTM_20.iq_stPtm.q_RunDO));
+PFM_231(VentValve:= VCC_231.q_stValve, TurboIsOn:= GEM1_PTM_30.iq_stPtm.q_RunDO);
+PFM_251(VentValve:= VCC_251.q_stValve, TurboIsOn:= GEM1_PTM_50.iq_stPtm.q_RunDO); 
+PFM_351(VentValve:= VCC_351.q_stValve, TurboIsOn:= GEM2_PTM_30.iq_stPtm.q_RunDO); 
+PFM_371(VentValve:= VCC_371.q_stValve, TurboIsOn:= GEM2_PTM_50.iq_stPtm.q_RunDO); 
+PFM_381(VentValve:= VCC_391.q_stValve, TurboIsOn:= (GEM2_PTM_60.iq_stPtm.q_RunDO OR GEM2_PTM_70.iq_stPtm.q_RunDO)); 
 					
 
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_DIFF_PUMP">
-      <LineId Id="144" Count="100" />
+      <LineId Id="144" Count="0" />
+      <LineId Id="255" Count="11" />
+      <LineId Id="254" Count="0" />
+      <LineId Id="253" Count="0" />
+      <LineId Id="157" Count="87" />
       <LineId Id="31" Count="0" />
     </LineIds>
   </POU>

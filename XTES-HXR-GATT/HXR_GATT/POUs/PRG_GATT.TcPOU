@@ -11,9 +11,9 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Gauges*)
-GPI_311();
-GBA_311(i_rFULL_SCALE := 2.0 (*Torr*));
-GMP_311();
+GATT_GPI_10();
+GATT_GBA_10(i_rFULL_SCALE := 2.0 (*Torr*));
+GATT_GMP_10();
 
 (*Valves*)
 (*Gas Cell vent valve*)

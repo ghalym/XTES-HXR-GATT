@@ -6,15 +6,16 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[(*Roots Pump Chamber 1*)
+      <ST><![CDATA[(*EM1L0*)
+(*Roots Pump Chamber 1*)
 (*gauges*)
-GPI_261(PG=>);
-GPI_262(PG=>);
-GPI_263(PG=>);
+GEM1_GPI_60(PG=>);
+GEM1_GPI_61(PG=>);
+GEM1_GPI_71(PG=>);
 
 (*Isolation Valve*)
-VRC_261(Pump:=PFM_261.q_stPump,Gauge:=GPI_261.PG,i_xExtILK_OK:=TRUE);
-VRC_262(Pump:=PFM_262.q_stPump,Gauge:=GPI_261.PG,i_xExtILK_OK:=TRUE);		
+VRC_261(Pump:=PFM_261.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);
+VRC_262(Pump:=PFM_262.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);		
 
 
 (* dry pump*)
@@ -24,22 +25,23 @@ PFM_262();
 
 
 
-
+(*EM2L0*)
 (*Roots Pump Chamber 1*)
 (*gauges*)
-GPI_341(PG=>);
-GPI_342(PG=>);
-GPI_343(PG=>);
+GEM2_GPI_10(PG=>);
+GEM2_GPI_11(PG=>);
+GEM2_GPI_21(PG=>);
 
 (*Isolation Valve*)
-VRC_341(Pump:=PFM_341.q_stPump,Gauge:=GPI_341.PG,i_xExtILK_OK:=TRUE);
-VRC_342(Pump:=PFM_342.q_stPump,Gauge:=GPI_341.PG,i_xExtILK_OK:=TRUE);
+VRC_341(Pump:=PFM_341.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
+VRC_342(Pump:=PFM_342.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
 
 (* dry pump*)
 PFM_341();
 PFM_342();]]></ST>
     </Implementation>
     <LineIds Name="PRG_ROOTS">
+      <LineId Id="42" Count="0" />
       <LineId Id="8" Count="1" />
       <LineId Id="5" Count="0" />
       <LineId Id="7" Count="0" />

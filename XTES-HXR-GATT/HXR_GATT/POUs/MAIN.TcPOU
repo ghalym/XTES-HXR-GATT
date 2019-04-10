@@ -3,6 +3,7 @@
   <POU Name="MAIN" Id="{45381f7c-4c5f-4ec8-9129-311fb837ab4d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -19,7 +20,9 @@ PRG_GEM();
 ]]></ST>
     </Implementation>
     <LineIds Name="MAIN">
-      <LineId Id="37" Count="9" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="39" Count="7" />
       <LineId Id="29" Count="0" />
     </LineIds>
   </POU>

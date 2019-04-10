@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.16">
+  <POU Name="PRG_ACTUATORS" Id="{2eccc79f-a12c-40ff-a593-4981b0ae670c}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_ACTUATORS
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[MPA_321();
+MPA_322();
+MPA_323();
+MPA_324();
+MPA_325();
+MPA_326();
+MPA_327();
+MPA_328();
+MPA_329();]]></ST>
+    </Implementation>
+    <LineIds Name="PRG_ACTUATORS">
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="1" />
+      <LineId Id="10" Count="1" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="13" Count="1" />
+      <LineId Id="12" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

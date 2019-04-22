@@ -14,13 +14,13 @@ GEM1_GPI_61(PG=>);
 GEM1_GPI_71(PG=>);
 
 (*Isolation Valve*)
-VRC_261(Pump:=PFM_261.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);
-VRC_262(Pump:=PFM_262.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);		
+GEM1_VRC_60(Pump:=GEM1_PRO_60.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);
+GEM1_VRC_70(Pump:=GEM1_PRO_70.q_stPump,Gauge:=GEM1_GPI_60.PG,i_xExtILK_OK:=TRUE);		
 
 
 (* dry pump*)
-PFM_261();
-PFM_262();
+GEM1_PRO_60();
+GEM1_PRO_70();
 
 
 
@@ -33,12 +33,12 @@ GEM2_GPI_11(PG=>);
 GEM2_GPI_21(PG=>);
 
 (*Isolation Valve*)
-VRC_341(Pump:=PFM_341.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
-VRC_342(Pump:=PFM_342.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
+GEM2_VRC_10(Pump:=GEM2_PRO_10.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
+GEM2_VRC_20(Pump:=GEM2_PRO_20.q_stPump,Gauge:=GEM2_GPI_10.PG,i_xExtILK_OK:=TRUE);
 
 (* dry pump*)
-PFM_341();
-PFM_342();]]></ST>
+GEM2_PRO_10();
+GEM2_PRO_20();]]></ST>
     </Implementation>
     <LineIds Name="PRG_ROOTS">
       <LineId Id="42" Count="0" />

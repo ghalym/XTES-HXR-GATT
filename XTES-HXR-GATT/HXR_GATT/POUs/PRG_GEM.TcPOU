@@ -21,7 +21,7 @@ GEM1_GBA_41(i_rFULL_SCALE := 10.0 (*Torr*));
 GEM1_GBA_42(i_rFULL_SCALE := 0.05 (*Torr*));
 
 (* N2 Cut Off Valves *)
-VVC_241(i_xExtILK_OK:= US_Aperture_Closed AND US_Turbo_Valves_Open AND US_Turbo_Running); 
+GEM1_VVC_40(i_xExtILK_OK:= US_Aperture_Closed AND US_Turbo_Valves_Open AND US_Turbo_Running); 
 
 (*Flow Control Valves*)
 GEM1_VPC_41 (i_xExtIlkOK := TRUE, i_rReqPos:= VPC_241_Req_Pos);
@@ -34,7 +34,7 @@ GEM1_VPC_42 (i_xExtIlkOK := TRUE, i_rReqPos:= VPC_242_Req_Pos);
 GEM2_GBA_41(i_rFULL_SCALE := 2.0 (*Torr*));
 GEM2_GBA_42(i_rFULL_SCALE := 0.05 (*Torr*));
 (* N2 Cut Off Valves *)
-VVC_361(i_xExtILK_OK:= DS_Aperture_Closed AND DS_Turbo_Valves_Open AND DS_Turbo_Running); 
+GEM2_VVC_40(i_xExtILK_OK:= DS_Aperture_Closed AND DS_Turbo_Valves_Open AND DS_Turbo_Running); 
 
 
 (*Flow Control Valves*)

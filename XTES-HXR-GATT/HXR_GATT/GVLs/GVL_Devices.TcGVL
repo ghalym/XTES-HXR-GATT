@@ -74,9 +74,9 @@
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:70 '}
 	GEM2_GPI_70 : FB_MKS317;
 	(* GAS Cell CM*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:311 '}
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:10 '}
 	GATT_GBA_10 : FB_GCM;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GMP:311 '}
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:GMP:10 '}
 	GATT_GMP_10 : FB_GCM;
 	(*GEM Gauges*)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:GBA:41 '}
@@ -88,6 +88,9 @@
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:GBA:42 '}
 	GEM2_GBA_42 : FB_GCM;
 
+
+	
+	
 	(*Differential Pumping section*)
 	(*valves*)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VGC:10 '}
@@ -164,11 +167,11 @@
 	GATT_VCN_10 : FB_VCN;
 	(* N2 cutt off valve *)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VVC:40'}
-	GEM1_VVC_40: FB_VCC;
+	GEM1_VVC_40: FB_VVC;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:10 '}
-	GATT_VVC_10: FB_VCC;
+	GATT_VVC_10: FB_VVC;
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VVC:40 '}
-	GEM2_VVC_40: FB_VCC;
+	GEM2_VVC_40: FB_VVC;
 	(*Pressure Control Valve*)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VPC:41 '}
 	GEM1_VPC_41 : FB_MKS248;
@@ -227,24 +230,27 @@
 	GEM2_PRO_20: FB_KashiyamaPump;
 	
 	
+	
+	
+	
 	(*Pneumatic actuators*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:321 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:321 '}
 	MPA_321: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:322 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:322 '}
 	MPA_322: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:323 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:323 '}
 	MPA_323: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:324 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:324 '}
 	MPA_324: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:325 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:325 '}
 	MPA_325: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:326 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:326 '}
 	MPA_326: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:327 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:327 '}
 	MPA_327: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:328 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:328 '}
 	MPA_328: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:MPA:329 '}
+	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:329 '}
 	MPA_329: FB_MPA;
 	
 	

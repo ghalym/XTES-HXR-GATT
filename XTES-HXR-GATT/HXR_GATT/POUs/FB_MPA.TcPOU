@@ -17,6 +17,10 @@ VAR_OUTPUT
     pv: MPS_FAULT
 	'}
 	xMPS_OK:BOOL;
+	{attribute 'pytmc' := '
+    pv: MOT_DONE
+	'}
+	xDone:Bool; // Motion is Done 
 END_VAR
 
 VAR
@@ -68,6 +72,10 @@ ELSE
 	q_stAct.eState:=INVALID;
 END_IF
 
+(*Set the Done signal*)
+xDone := (q_stAct.bRetract_SW AND q_stAct.eState=RETRACTED) OR (q_stAct.eState=INSERTED AND q_stAct.bInsert_SW);
+	
+
 (*MPS FAULT*)
 //xMPS_OK := (q_stAct.eState=INSERTED);
 
@@ -75,8 +83,8 @@ END_IF
 
 (*Actuate the device*)
 q_stAct.q_bRetract := q_stAct.bRetractOK AND q_stAct.bRetract_SW;
-
 q_stAct.q_bInsert := q_stAct.bInsertOK AND q_stAct.bInsert_SW;
+
 IF q_stAct.q_bInsert THEN
 	q_stAct.q_bRetract := FALSE;
 	q_stAct.bRetract_SW:= FALSE;
@@ -121,12 +129,18 @@ q_xRetract_DO:=q_stAct.q_bRetract;]]></ST>
       <LineId Id="78" Count="1" />
       <LineId Id="84" Count="9" />
       <LineId Id="81" Count="0" />
+      <LineId Id="155" Count="0" />
+      <LineId Id="154" Count="0" />
+      <LineId Id="158" Count="1" />
       <LineId Id="80" Count="0" />
       <LineId Id="82" Count="0" />
       <LineId Id="113" Count="1" />
       <LineId Id="112" Count="0" />
       <LineId Id="83" Count="0" />
-      <LineId Id="21" Count="5" />
+      <LineId Id="21" Count="1" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="157" Count="0" />
+      <LineId Id="25" Count="1" />
       <LineId Id="34" Count="0" />
       <LineId Id="32" Count="1" />
       <LineId Id="35" Count="0" />

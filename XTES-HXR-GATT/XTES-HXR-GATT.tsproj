@@ -1151,6 +1151,118 @@
 							<Name>GVL_Devices.MPA_329.i_xRetractedLS</Name>
 							<Type>BOOL</Type>
 						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_1.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_1.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_2.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_AIR_2.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_1.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_1.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_2.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_N2_2.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_41.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_42.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM1_GFM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_41.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_41.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_42.Sensor.iPRESS_R</Name>
+							<Comment>
+								<![CDATA[input pressure in machine form]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Sensors.GEM2_GFM_42.i_iPRESS_R</Name>
+							<Comment>
+								<![CDATA[ input Pressure // Link to analog Input]]>
+							</Comment>
+							<Type>INT</Type>
+						</Var>
 					</Vars>
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>

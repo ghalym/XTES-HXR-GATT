@@ -3,13 +3,12 @@
   <POU Name="PRG_DIFF_PUMP" Id="{851181dd-ec63-4e65-94b1-0ffbf8be6c3d}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_DIFF_PUMP
 VAR
-
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[(*Gagues*)
 (*EM1L0*)
-DSG_GCC(VG=>); // Downstream Gague from Down Stream PLC System
+DSG_GCC(VG=>); // Downstream Gauge from Down Stream PLC System
 GEM1_GPI_10(PG=>);
 GEM1_GCC_10(PG:=GEM1_GPI_10.PG,IG=>);
 GEM1_GPI_20(PG=>);

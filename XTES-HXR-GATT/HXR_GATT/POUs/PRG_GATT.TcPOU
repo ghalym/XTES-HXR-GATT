@@ -3,10 +3,32 @@
   <POU Name="PRG_GATT" Id="{f1d0afc8-7bf0-4af8-a68e-a088a19c6a4e}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM PRG_GATT
 VAR
-
-	
 	(*needle valve control position*)
 	VCN_Req_Pos: REAL;
+	
+	fb_PID: FB_BasicPID;
+	
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:CNTRL:SP '}
+	fSetpointValue : REAL:=0.001;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:CNTRL:Kp '}
+	fKp : REAL:= 1.1; 
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:CNTRL:Tn '}
+	fTn : REAL:= 0.5; 
+	
+	
+	
+	
+	eMode							: E_CTRL_MODE;
+	stCTRL_PID_PARAMS		: ST_CTRL_PID_PARAMS;
+
+	eErrorId						: E_CTRL_ERRORCODES;
+	bError							: BOOL;
+	bARWactive					: BOOL;
+
+	(* controller *)
+	fbCTRL_PID					: FB_CTRL_PID;
+	bInit							: BOOL	:= TRUE;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -22,15 +44,99 @@ VVRC_311 (i_xExtILK_OK:= GEM2_VGC_70.iq_stValve.i_xClsLS AND DSV_VGC.VGC.i_xClsL
 (* N2 Cutt off valve*)
 GATT_VVC_10(i_xExtILK_OK := US_Aperture_Closed AND US_Turbo_Valves_Open AND US_Turbo_Running AND DS_Aperture_Closed AND DS_Turbo_Valves_Open AND US_Turbo_Running AND US_TwinscrewPumps_Valves_Open AND DS_TwinscrewPumps_Valves_Open);
 
+(*Pressure control loop implementation*)
+If(GATT_VCN_10.iq_stVCN.eValveControl = PressureControl) THEN
+	//GATT_VVC_10.iq_stValve.pv_xOPN_SW := true;
+	GATT_VVC_10.M_Set_OPN_SW(true);
+	// check valve is open, otherwise raise error
+END_IF
+
+
+	
+(*-------------------------------------------------------------------*)
+(*        BASIC    PRG_FB_CTRL_PID               *)
+(*-------------------------------------------------------------------*)
+(*
+
+fb_PID(
+	fSetpointValue:= fSetpointValue, 
+	fActualValue:= GATT_GBA_10.VG.rPRESS , 
+	bReset:= , 
+	fCtrlCycleTime:= , 
+	fKp:= fKp, 
+	fTn:= fTn, 
+	fTv:= 0, 
+	fTd:= 0, 
+	fCtrlOutput=>GATT_VCN_10.i_rReqPos, 
+	nErrorStatus=> );
+	
+*)	
+(*-------------------------------------------------------------------*)
+(*            PRG_FB_CTRL_PID               *)
+(*-------------------------------------------------------------------*)
+
+
+IF bInit
+THEN
+	(* init parameter struct *)
+	stCTRL_PID_PARAMS.tCtrlCycleTime		:= T#10ms;
+	stCTRL_PID_PARAMS.tTaskCycleTime		:= T#10ms;
+	stCTRL_PID_PARAMS.fKp					:= fKp;			(* proportional gain Kp				*)
+	stCTRL_PID_PARAMS.tTn					:= T#1s;		(*  Tn									*)
+	stCTRL_PID_PARAMS.tTv					:= T#200ms;	(*  Tv									*)
+	stCTRL_PID_PARAMS.tTd					:= T#100ms;	(*  Td									*)
+	stCTRL_PID_PARAMS.fOutMaxLimit			:=  100;			(* maximum output limit				*)
+	stCTRL_PID_PARAMS.fOutMinLimit			:= 0;			(* minimum output limit				*)
+
+	(* set the mode to ACTIVE --> normal operation *)
+	eMode							:= eCTRL_MODE_ACTIVE;
+
+	(* reset the init flag *)
+	bInit							:= FALSE;
+END_IF
+
+stCTRL_PID_PARAMS.fKp					:= fKp;			
+stCTRL_PID_PARAMS.tTn					:= T#1s;	
+
+(* call controller *)
+fbCTRL_PID(		fSetpointValue		:= fSetpointValue,
+					fActualValue		:= GATT_GBA_10.VG.rPRESS, // Pressure gauge selection
+					fManSyncValue	:= ,
+					bSync				:= ,
+					eMode				:= eMode,
+					bHold				:= ,
+					stParams			:= stCTRL_PID_PARAMS,
+					fOut				=> LREAL_TO_REAL(VCN_Req_Pos),
+					bARWactive		=> bARWactive,
+					eErrorId			=> eErrorId,
+					bError				=> bError
+				);
+
+
 (*flow control valve*)
 GATT_VCN_10(i_xExtIlkOK:= TRUE,i_ReqPos:= VCN_Req_Pos);
-
-(*Pressure control loop implementation*)
 ]]></ST>
     </Implementation>
     <LineIds Name="PRG_GATT">
-      <LineId Id="59" Count="15" />
+      <LineId Id="59" Count="10" />
+      <LineId Id="73" Count="1" />
       <LineId Id="28" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="233" Count="0" />
+      <LineId Id="101" Count="0" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="191" Count="6" />
+      <LineId Id="89" Count="0" />
+      <LineId Id="91" Count="9" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="118" Count="1" />
+      <LineId Id="121" Count="22" />
+      <LineId Id="199" Count="1" />
+      <LineId Id="198" Count="0" />
+      <LineId Id="144" Count="0" />
+      <LineId Id="161" Count="13" />
+      <LineId Id="201" Count="2" />
+      <LineId Id="120" Count="0" />
     </LineIds>
   </POU>
 </TcPlcObject>

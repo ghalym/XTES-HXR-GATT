@@ -74,18 +74,18 @@
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:GPI:70 '}
 	GEM2_GPI_70 : FB_MKS317;
 	(* GAS Cell CM*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:GBA:10 '}
-	GATT_GBA_10 : FB_GCM;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:GMP:11 '}
+	GATT_GMP_11 : FB_CMR362;
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:GMP:10 '}
 	GATT_GMP_10 : FB_GCM;
 	(*GEM Gauges*)
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:GBA:41 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:41 '}
 	GEM1_GBA_41 : FB_GCM;
-	{attribute 'pytmc' :=' pv: EM1L0:GEM:GBA:42 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GEM:GCM:42 '}
 	GEM1_GBA_42 : FB_GCM;
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:GBA:41 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:41 '}
 	GEM2_GBA_41 : FB_GCM;
-	{attribute 'pytmc' :=' pv: EM2L0:GEM:GBA:42 '}
+	{attribute 'pytmc' :=' pv: EM2L0:GEM:GCM:42 '}
 	GEM2_GBA_42 : FB_GCM;
 
 
@@ -120,21 +120,21 @@
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:VGC:60 '}
 	GEM2_VGC_60: FB_VRC;
 	(*Turbo isolation valves*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:10 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:10 '}
 	GEM1_VRC_10: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:20 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:20 '}
 	GEM1_VRC_20: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:30 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:30 '}
 	GEM1_VRC_30: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:50 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:50 '}
 	GEM1_VRC_50: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:30 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:30 '}
 	GEM2_VRC_30: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:50 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:50 '}
 	GEM2_VRC_50: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:60 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:60 '}
 	GEM2_VRC_60: FB_VRC;
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VRC:70 '}
+	{attribute 'pytmc' :=' pv: EM1L0:GAS:VRC:70 '}
 	GEM2_VRC_70: FB_VRC;
 	(*Kashiyama Valves*)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:VRC:60 '}
@@ -160,8 +160,8 @@
 	GEM2_VVC_70: FB_TurbVentvalve_NO;
 	
 	(*Gas cell vent valve*)
-	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:311 '}
-	VVRC_311 : FB_VRC;
+	{attribute 'pytmc' :=' pv: AT1L0:GAS:VVC:11 '}
+	VVC_11 : FB_VVC;
 	(* GAS cell needle valve*)
 	{attribute 'pytmc' :=' pv: AT1L0:GAS:VCN:10 '}
 	GATT_VCN_10 : FB_VCN;
@@ -206,7 +206,7 @@
 	GEM2_PTM_60 : FB_PTM_Agilent;
 	{attribute 'pytmc' :=' pv: EM2L0:GEM:PTM:70 '}
 	GEM2_PTM_70 : FB_PTM_Agilent;
-	(*Scrool Pumps*)
+	(*Scroll Pumps*)
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:20 '}
 	GEM1_PMF_20 : FB_ScrollPump;
 	{attribute 'pytmc' :=' pv: EM1L0:GEM:PMF:30 '}
@@ -234,23 +234,23 @@
 	
 	
 	(*Pneumatic actuators*)
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:321 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:321 '}
 	MPA_321: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:322 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:322 '}
 	MPA_322: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:323 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:323 '}
 	MPA_323: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:324 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:324 '}
 	MPA_324: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:325 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:325 '}
 	MPA_325: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:326 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:326 '}
 	MPA_326: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:327 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:327 '}
 	MPA_327: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:328 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:328 '}
 	MPA_328: FB_MPA;
-	{attribute 'pytmc' :=' pv: AT1L0:SOLID:MPA:329 '}
+	{attribute 'pytmc' :=' pv: AT1L0:FILTER:MPA:329 '}
 	MPA_329: FB_MPA;
 	
 	

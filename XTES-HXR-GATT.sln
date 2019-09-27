@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{B1E792BE-AA5F-4E3C-8C82-674BF9C0715B}") = "XTES-HXR-GATT", "XTES-HXR-GATT\XTES-HXR-GATT.tsproj", "{034B66E1-98F6-4DDF-9690-B6579F1B541D}"
 EndProject

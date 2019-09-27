@@ -7,7 +7,8 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[(*Ethercat Diagnostics*)
+DIAGNOSTICS();
 
 
 
@@ -21,6 +22,7 @@ PRG_GEM();
     </Implementation>
     <LineIds Name="MAIN">
       <LineId Id="37" Count="0" />
+      <LineId Id="61" Count="0" />
       <LineId Id="56" Count="0" />
       <LineId Id="39" Count="7" />
       <LineId Id="29" Count="0" />

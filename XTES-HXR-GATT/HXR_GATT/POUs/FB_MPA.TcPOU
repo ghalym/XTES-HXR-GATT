@@ -3,6 +3,7 @@
   <POU Name="FB_MPA" Id="{3965ca68-046c-4858-93f1-aaf5b6059f9e}" SpecialFunc="None">
     <Declaration><![CDATA[FUNCTION_BLOCK FB_MPA
 VAR_INPUT
+	(*EPS Interlock Bits*)
 	ibInsertOK: BOOL;
 	ibRetractOK: BOOL;
 	ibPMPS_OK:BOOL;
@@ -51,7 +52,6 @@ fbFSInit( CLK := TRUE, Q => xFirstPass);
 (*IO Mapping*)
 ACT_IO();
 
-(* On first PLC pass, put valve into vented state, which implies a closed valve *)
 IF xFirstPass THEN
 	q_stAct.eState := INVALID;
 	q_stAct.bRetract_SW := FALSE;
@@ -122,7 +122,8 @@ q_xRetract_DO:=q_stAct.q_bRetract;]]></ST>
     </Action>
     <LineIds Name="FB_MPA">
       <LineId Id="94" Count="1" />
-      <LineId Id="98" Count="7" />
+      <LineId Id="98" Count="2" />
+      <LineId Id="102" Count="3" />
       <LineId Id="111" Count="0" />
       <LineId Id="97" Count="0" />
       <LineId Id="96" Count="0" />

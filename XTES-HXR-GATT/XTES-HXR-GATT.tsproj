@@ -998,6 +998,10 @@
 					<Vars VarGrpType="2">
 						<Name>PlcTask Outputs</Name>
 						<Var>
+							<Name>L2SI_Vacuum_Library.LCLS_PMPS.GVL.g_FastFaultOutput1.q_xFastFaultOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
 							<Name>GVL_Devices.GEM1_GCC_10.q_xHV_DIS</Name>
 							<Comment><![CDATA[ Disable Gauge High Voltage when True // 'TcLinkTo' (EL2794) ^Output]]></Comment>
 							<Type>BOOL</Type>
@@ -1174,7 +1178,8 @@
 						</Var>
 						<Var>
 							<Name>GVL_Devices.GATT_VCN_10.q_iRawPosition</Name>
-							<Comment><![CDATA[ 
+							<Comment><![CDATA[iResolution: INT :=16;
+ 
 IO]]></Comment>
 							<Type>INT</Type>
 						</Var>
@@ -1394,14 +1399,6 @@ IO]]></Comment>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>GVL_Devices.MPA_324.q_xInsert_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
-							<Name>GVL_Devices.MPA_324.q_xRetract_DO</Name>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>GVL_Devices.MPA_325.q_xInsert_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
@@ -1415,6 +1412,14 @@ IO]]></Comment>
 						</Var>
 						<Var>
 							<Name>GVL_Devices.MPA_326.q_xRetract_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.MPA_324.q_xInsert_DO</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL_Devices.MPA_324.q_xRetract_DO</Name>
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
